@@ -8,6 +8,10 @@ class Cadastro extends StatefulWidget {
 }
 
 class _CadastroState extends State<Cadastro> {
+  TextEditingController txtnome = TextEditingController();
+  TextEditingController txtfabricante = TextEditingController();
+  TextEditingController txtpreco = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,6 +32,7 @@ class _CadastroState extends State<Cadastro> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 TextFormField(
+                  controller: txtnome,
                   keyboardType: TextInputType.text,
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(labelText: "Alimento"),
@@ -37,6 +42,7 @@ class _CadastroState extends State<Cadastro> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: txtfabricante,
                   keyboardType: TextInputType.text,
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(labelText: "Fabricante"),
@@ -46,20 +52,24 @@ class _CadastroState extends State<Cadastro> {
                   height: 20,
                 ),
                 TextFormField(
+                  controller: txtpreco,
                   keyboardType: TextInputType.number,
                   textAlign: TextAlign.center,
                   decoration: InputDecoration(labelText: "Preço"),
                   style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 60,
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text("Adicionar Produtos"),
+                    child: Text(
+                      "Adicionar Produtos",
+                      style: TextStyle(color: Colors.white),
+                    ),
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueGrey),
                   ),
