@@ -1,3 +1,4 @@
+import 'package:app_estoque/screen/telaCadastro.dart';
 import 'package:flutter/material.dart';
 
 Widget menuDrawer(BuildContext context) {
@@ -37,7 +38,7 @@ Widget menuDrawer(BuildContext context) {
             ]),
           ),
         ),
-        const ListTile(
+        ListTile(
           leading: Icon(
             Icons.add,
             color: Colors.blueGrey,
@@ -46,6 +47,11 @@ Widget menuDrawer(BuildContext context) {
             "Novo Produto",
             style: TextStyle(fontSize: 16),
           ),
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Cadastro()));
+          },
         ),
         const ListTile(
           leading: Icon(
