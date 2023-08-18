@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app_estoque/screen/telaCadastro.dart';
 import 'package:flutter/material.dart';
 

@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, file_names
 import 'package:flutter/material.dart';
 
 class Cadastro extends StatefulWidget {
